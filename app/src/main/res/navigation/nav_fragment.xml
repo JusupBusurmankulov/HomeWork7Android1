@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_fragment"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.example.homework7android1.fragments.ListFragment"
+        android:label="List"
+        tools:layout="@layout/fragment_list" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.homework7android1.fragments.SettingsFragment"
+        android:label="Settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/detailedFragment"
+        android:name="com.example.homework7android1.fragments.DetailedFragment"
+        android:label="Detailed"
+        tools:layout="@layout/fragment_detailed" />
+    <fragment
+        android:id="@+id/taskFragment"
+        android:name="com.example.homework7android1.fragments.TaskFragment"
+        android:label="Task"
+        tools:layout="@layout/fragment_task" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.homework7android1.fragments.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_taskFragment"
+            app:destination="@id/taskFragment" />
+    </fragment>
+
+</navigation>
